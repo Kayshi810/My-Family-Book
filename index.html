@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <title>My Family Book</title>
+    </head>
+
+    <body>
+        <center>
+            <div>
+                <h1>My Family Book</h1>
+                <img id="Start_Pic" style = "width: 400px;" src ="Family.jpg">
+                <h4 id="family_member_name"></h4>
+                <br>
+                <br>
+                <label id="Name_Display"></label>
+                <br>
+                <br>
+                <button id="Button" onclick="update()">Next</button>
+            </div> 
+        </center>
+
+
+    <script>
+        var names=["Vikas Kaushal","Charu Gupta","Heer Kaushal"];
+        
+        var images=["Daddy.JPG","Mom.JPG","Heer.JPG"];
+        
+        var i=0;
+        function update()
+        {
+             if (i > 2)
+             {
+                i = 0;
+             }
+             var Updated_image = images [i];
+             var Updated_name = names [i];
+             document.getElementById("Start_Pic").src = Updated_image;
+             document.getElementById("Name_Display").innerHTML = Updated_name;
+             i++;
+            }
+
+
+    </script>
+    </body>
+</html>
